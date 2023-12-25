@@ -5,6 +5,7 @@ import Software from "./components/Software";
 import Awards from "./components/Awards";
 import Account from "./components/Account";
 import Choose from "./components/Choose";
+import Footer from "./components/Footer";
 
 function App(){
   return(
@@ -15,6 +16,7 @@ function App(){
     <Awards/>
     <Account/>
     <Choose/>
+    <Footer/>
     </>
   )
 }
