@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Software from "./components/Software";
 import Awards from "./components/Awards";
 import Account from "./components/Account";
+import Choose from "./components/Choose";
 
 function App(){
   return(
@@ -13,6 +14,7 @@ function App(){
     <Software/>
     <Awards/>
     <Account/>
+    <Choose/>
     </>
   )
 }
