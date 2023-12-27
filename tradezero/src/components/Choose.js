@@ -1,12 +1,18 @@
 import React from 'react'
-
+import useOnlineStatus from '../utilis/useOnlineStatus'
 const Choose = () => {
+    const onlineStatus=useOnlineStatus()
+
+    if(onlineStatus=== false)
+    return(
+      <h1 className='text-white'>Looks like you are Offline!!</h1>
+    )
   return (
     <div className='w-full max-h-[850px] sm:max-h[1200px] bg-white py-16 px-4 font-medium '>
       <h1 className='text-[#00df9a] mx-auto text-center md:text-3xl font-bold p-2'>Free Stock Trading is Just the Beginning</h1>
 
 <div class="grid grid-rows-4 grid-flow-col gap-4">
-  <div className='md:w-[140px] mx-auto'>
+  <div className='md:w-[140px] sm:w-[10px] mx-auto'>
         <img src="https://tradezero.co/_nuxt/top-left-icon.89f95e46.svg" alt='/' /> 
         <h1 className='font-extrabold' >Free Limit Orders</h1>
         <p >We provide 100% free limit orders to all of our accounts. Open an Account with TradeZero...</p>

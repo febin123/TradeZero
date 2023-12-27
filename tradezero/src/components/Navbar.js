@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import useOnlineStatus from '../utilis/useOnlineStatus'
 import {AiOutlineClose, AiOutlineMenu}from 'react-icons/ai'
 const Navbar = () => {
   const [nav,setNav]=useState(false)
@@ -7,6 +8,12 @@ const Navbar = () => {
   const handleNav=()=>{
     setNav(!nav)
   }
+  const onlineStatus=useOnlineStatus()
+
+  if(onlineStatus=== false)
+  return(
+    <h1 className='text-white'>Looks like you are Offline!!</h1>
+  )
   return (
     <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-10 text-white'>
         <h1 className='w-full text-3xl font-bold text-[#00df9a]'>TradeZero</h1>

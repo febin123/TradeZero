@@ -7,9 +7,15 @@ import Account from "./components/Account";
 import Choose from "./components/Choose";
 import Footer from "./components/Footer";
 import {Outlet, createBrowserRouter} from "react-router-dom"
-
+import useOnlineStatus from "./utilis/useOnlineStatus";
 
 const AppLayout=()=>{
+    const onlineStatus=useOnlineStatus()
+
+    if(onlineStatus=== false)
+    return(
+      <h1 className='text-white'>Looks like you are Offline!!</h1>
+    )
   return(
     <div>
     <Navbar/>

@@ -1,6 +1,13 @@
 import React from 'react'
 import Typed from 'react-typed';
+import useOnlineStatus from '../utilis/useOnlineStatus';
 function Hero() {
+  const onlineStatus=useOnlineStatus()
+
+  if(onlineStatus=== false)
+  return(
+    <h1 className='text-white'>Looks like you are Offline!!</h1>
+  )
   return (
     <div>
       <div className="text-white">
