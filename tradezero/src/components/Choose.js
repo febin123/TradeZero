@@ -5,7 +5,7 @@ const Choose = () => {
 
     if(onlineStatus=== false)
     return(
-      <h1 className='text-white'>Looks like you are Offline!!</h1>
+      <h1 className='text-white'>🔴 Looks like you are Offline!!</h1>
     )
   return (
     <div className='w-full max-h-[850px] sm:max-h[1200px] bg-white py-16 px-4 font-medium '>

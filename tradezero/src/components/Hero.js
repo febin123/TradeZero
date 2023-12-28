@@ -6,7 +6,7 @@ function Hero() {
 
   if(onlineStatus=== false)
   return(
-    <h1 className='text-white'>Looks like you are Offline!!</h1>
+    <h1 className='text-white'>🔴 Looks like you are Offline!!</h1>
   )
   return (
     <div>

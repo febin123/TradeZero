@@ -5,7 +5,7 @@ const Account = () => {
 
   if(onlineStatus=== false)
   return(
-    <h1 className='text-white'>Looks like you are Offline!!</h1>
+    <h1 className='text-white'>🔴 Looks like you are Offline!!</h1>
   )
   return (
     <div className='w-full bg-[#00df9a] py-16 px-4 font-medium '>

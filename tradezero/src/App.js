@@ -1,21 +1,28 @@
-import React from "react";
+import React,{Suspense, lazy} from "react";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Software from "./components/Software";
-import Awards from "./components/Awards";
-import Account from "./components/Account";
-import Choose from "./components/Choose";
 import Footer from "./components/Footer";
 import {Outlet, createBrowserRouter} from "react-router-dom"
 import useOnlineStatus from "./utilis/useOnlineStatus";
 
+
+
+//Start of Lazing loading
+const Choose=lazy(()=>import("./components/Choose"))
+const Hero=lazy(()=>import("./components/Hero"))
+const Software=lazy(()=>import("./components/Software"))
+const Awards=lazy(()=>import("./components/Awards"))
+const Account=lazy(()=>import("./components/Account"))
+//end of lazy loading
 const AppLayout=()=>{
     const onlineStatus=useOnlineStatus()
-
+   
+    
     if(onlineStatus=== false)
     return(
-      <h1 className='text-white'>Looks like you are Offline!!</h1>
+      <h1 className='text-white'>🔴Looks like you are Offline!! </h1>
     )
+
+  
   return(
     <div>
     <Navbar/>
@@ -32,27 +39,24 @@ export const appRouter=createBrowserRouter([
     children:[
         {
             path:'/',
-            element:<Hero/>
+            element:<Suspense fallback={<h1>Loading page...</h1>}><Hero/></Suspense>
         },
         {
             path:'/why',
-            element:<Choose/>
+            element: <Suspense fallback={<h1>Loading page...</h1>}><Choose/></Suspense> 
         },
         {
             path:'/soft',
-            element:<Software/>
+            element:<Suspense fallback={<h1>Loading page...</h1>}><Software/></Suspense>
         },
         {
             path:'/awards',
-            element:<Awards/>
+            element:<Suspense fallback={<h1>Loading page...</h1>}><Awards/></Suspense>
         },
         {
             path:'/account',
-            element:<Account/>
+            element:<Suspense fallback={<h1>Loading page...</h1>}><Account/></Suspense>
         }
     ]
 }
 ])
-// const root=ReactDOM.createRoot(document.querySelector('#root'))
-// root.render(<RouterProvider router={appRouter}/>)
-// export default App

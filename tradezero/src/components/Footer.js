@@ -6,8 +6,14 @@ import {
   FaInstagram,
   FaTwitterSquare,
 } from 'react-icons/fa';
-
+import useOnlineStatus from '../utilis/useOnlineStatus';
 const Footer = () => {
+    const onlineStatus=useOnlineStatus()
+
+    if(onlineStatus=== false)
+    return(
+      <h1 className='text-white'>🔴 Looks like you are Offline!!</h1>
+    )
   return (
     <div className='max-w-[1240px] max-h-[400px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300'>
       <div>

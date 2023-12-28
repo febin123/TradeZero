@@ -1,6 +1,12 @@
 import React from 'react'
-
+import useOnlineStatus from '../utilis/useOnlineStatus'
 const Software = () => {
+  const onlineStatus=useOnlineStatus()
+
+  if(onlineStatus=== false)
+  return(
+    <h1 className='text-white'>🔴 Looks like you are Offline!!</h1>
+  )
   return (
     <div className='w-full bg-white py-16 px-4 '>
          <h1 className='text-black md:text-3xl text-center mx-auto font-extrabold p-2'>Free Online Stock Trading Software</h1>
