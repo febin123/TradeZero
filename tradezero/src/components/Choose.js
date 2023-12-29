@@ -12,30 +12,30 @@ const Choose = () => {
       <h1 className='text-[#00df9a] mx-auto text-center md:text-3xl font-bold p-2'>Free Stock Trading is Just the Beginning</h1>
 
 <div class="grid grid-rows-4 grid-flow-col gap-4">
-  <div className='md:w-[140px] sm:w-[10px] mx-auto'>
+  <div className='w-[140px] m-auto'>
         <img src="https://tradezero.co/_nuxt/top-left-icon.89f95e46.svg" alt='/' /> 
         <h1 className='font-extrabold' >Free Limit Orders</h1>
         <p >We provide 100% free limit orders to all of our accounts. Open an Account with TradeZero...</p>
   </div>
 
-  <div className='md:w-[140px] sm:w-[10px] m-auto'>
+  <div className='w-[140px] m-auto'>
         <img src="https://tradezero.co/_nuxt/bottom-left-icon.7d802034.svg" className='row-start-4' alt='/' /> 
         <h1 className='font-extrabold' >Free Limit Orders</h1>
         <p >TradeZero offers all clients state-of-the-art trading software. Whether you're a beginner...</p>
   </div>
   <div className="grid grid-row-subgrid gap-4 row-span-4">
       <div>
-      <img className='md:w-[500px] sm:display:none m-auto p-2 row-start-2' src="https://tradezero.co/_nuxt/why-logo-trees.a8cc0706.png" alt='/' />
+      <img className='invisible md:visible m-auto p-2 row-start-2' src="https://tradezero.co/_nuxt/why-logo-trees.a8cc0706.png" alt='/' />
 
       </div>
   </div>
 
-  <div className='md:w-[140px] sm:w-[10px] m-auto'>
+  <div className='w-[140px] m-auto'>
         <img src="https://tradezero.co/_nuxt/top-right-icon.5bcfac96.svg" className='row-start-1' alt='/' /> 
         <h1 className='font-extrabold' >Free Limit Orders</h1>
         <p>TradeZero provides clients up to 6 to 1 intraday leverage on their equity....</p>
   </div>
-  <div className='md:w-[140px] sm:w-[10px] m-auto'>
+  <div className='w-[140px] m-auto'>
         <img src="https://tradezero.co/_nuxt/bottom-right-icon.c5b7d969.svg" className='row-start-4' alt='/' /> 
         <h1 className='font-extrabold' >Free Limit Orders</h1>
         <p >No Pattern Day Trading Rules. We're the best brokerage for pattern day traders. No pattern...</p>
